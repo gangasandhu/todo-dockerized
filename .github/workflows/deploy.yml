@@ -22,7 +22,7 @@ jobs:
           key: |
             ${{ secrets.EC2_PRIVATE_KEY }}
           script: |
-            cd /home/${{ secrets.EC2_USER }}/todo-dockerized
+            cd /home/${{ secrets.EC2_USERNAME }}/todo-dockerized
             git pull origin main
             docker compose down
             docker compose up -d --build
